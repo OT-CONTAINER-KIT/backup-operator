@@ -1,0 +1,5 @@
+## Append samples you want in your CSV to this file as resources ##
+resources:
+- database_v1beta1_redisbackup.yaml
+- database_v1beta1_redisclusterbackup.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples

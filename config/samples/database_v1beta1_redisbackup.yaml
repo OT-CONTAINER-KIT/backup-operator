@@ -1,0 +1,12 @@
+apiVersion: database.backup.opstreelabs.in/v1beta1
+kind: RedisBackup
+metadata:
+  labels:
+    app.kubernetes.io/name: redisbackup
+    app.kubernetes.io/instance: redisbackup-sample
+    app.kubernetes.io/part-of: backup-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: backup-operator
+  name: redisbackup-sample
+spec:
+  # TODO(user): Add fields here

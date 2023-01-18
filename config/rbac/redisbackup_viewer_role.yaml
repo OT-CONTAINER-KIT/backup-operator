@@ -1,0 +1,27 @@
+# permissions for end users to view redisbackups.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: redisbackup-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: backup-operator
+    app.kubernetes.io/part-of: backup-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: redisbackup-viewer-role
+rules:
+- apiGroups:
+  - database.backup.opstreelabs.in
+  resources:
+  - redisbackups
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - database.backup.opstreelabs.in
+  resources:
+  - redisbackups/status
+  verbs:
+  - get

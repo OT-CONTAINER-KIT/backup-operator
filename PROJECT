@@ -1,0 +1,28 @@
+domain: backup.opstreelabs.in
+layout:
+- go.kubebuilder.io/v3
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
+projectName: backup-operator
+repo: github.com/ot-container-kit/backup-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: backup.opstreelabs.in
+  group: database
+  kind: RedisBackup
+  path: github.com/ot-container-kit/backup-operator/api/v1beta1
+  version: v1beta1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: backup.opstreelabs.in
+  group: database
+  kind: RedisClusterBackup
+  path: github.com/ot-container-kit/backup-operator/api/v1beta1
+  version: v1beta1
+version: "3"
